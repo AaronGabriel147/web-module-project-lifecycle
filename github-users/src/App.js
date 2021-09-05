@@ -41,7 +41,7 @@ class App extends React.Component {
 
 
   render() {
-    console.log('update to state.following!', this.state.following)
+    // console.log('update to state.following!', this.state.following)
     // console.log('state.username: ', this.state.username)
 
     return (
@@ -51,9 +51,7 @@ class App extends React.Component {
         <p>Repos: {this.state.username.public_repos} </p>
         <p>Following: {this.state.username.following}</p>
         <p>Followers: {this.state.username.followers}</p>
-        <Following />
-
-
+        <Following following={this.state.following}/>
     </div>
     );
   }
